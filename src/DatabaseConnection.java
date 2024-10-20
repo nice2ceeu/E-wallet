@@ -486,15 +486,13 @@ public class DatabaseConnection {
             DefaultTableModel model3 = (DefaultTableModel) AdminDashboard.transactionTable.getModel();
             model3.setRowCount(0);
 
-
-            boolean hasData = true;
-
             // Transactions
             while (rs.next()) {
                 model3.addRow(new Object[]{rs.getString(1), rs.getString(2), rs.getString( 5), rs.getString(4), rs.getString(3)});
             }
-            if (!hasData) {
-                JOptionPane.showMessageDialog(null, "No Request found .", "Info", JOptionPane.INFORMATION_MESSAGE);
+
+            if (model3.getRowCount()==0) {
+                JOptionPane.showMessageDialog(null, "User not found/No transaction .", "Info", JOptionPane.INFORMATION_MESSAGE);
             }
         }catch (SQLException e){
             JOptionPane.showMessageDialog(null, "Server Error.", "Error", JOptionPane.ERROR_MESSAGE);

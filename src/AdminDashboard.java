@@ -19,7 +19,7 @@ public class AdminDashboard extends JFrame implements ActionListener {
     JScrollPane sp,sp1,sp2;
     public static String[] columns ={"ID","First Name","Surname","Email","Username","Age","Password","Sex","Date of request"};
     public static String[] columns1 ={"User ID","First Name","Surname","Email","Username","Age","Password","Sex","Date Created"};
-    public static String[] columns2 ={"Transact ID","Operation","Full Name","Amount","Date/Time"};
+    public static String[] columns2 ={"Transact ID","Operation","Sender/Receiver","Amount","Date/Time"};
     AdminDashboard(){
         this.setSize(1200,600);
         this.getContentPane().setBackground(Color.lightGray);
